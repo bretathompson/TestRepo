@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math and Date Objects</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: blueviolet;
+            color: white;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/zap.png" alt="Zap" id="randomImage"><br>
+    <script>
+          /* 1. Add a Math object to the following series of numbers to return the largest number. Write the
+        largest number to the browser window. */  4, 3.45, 9.4, 8.45, 2.46, 10, 7.95, 1.15, 5.13, 6.35
+
+        const num1 = [4, 3.45, 9.4, 8.45, 2.46, 10, 7.95, 1.15, 5.13, 6.35];
+        const lgNumber = Math.max(...num1);
+        document.write("Largest Number: " + lgNumber + "<br>");
+       
+         /* 2. Add a Math object to the following series of numbers to return the smallest number. Write the
+        smallest number to the browser window on a separate line. */  4, 3.45, 9.4, 8.45, 2.46, 10, 7.95, 1.15, 5.13, 6.35
+
+        const num2 = [4, 3.45, 9.4, 8.45, 2.46, 10, 7.95, 1.15, 5.13, 6.35];
+        const smNumber = Math.min(...num2);
+        document.write("Smallest Number: " + smNumber + "<br>");
+
+         /* 3. Add a Math object to the following number to round it up to the next highest integer (whole number). Do
+        not use the round() method. Write the number to the browser window on a separate line. */  3.45
+        
+        const roundUp = Math.ceil(3.45);
+        document.write("Rounded Up: " + roundUp + "<br>");
+
+        /* 4. Add a Math object to the following number to round it down to the next lowest integer. Do not use the
+        round() method. Write the number to the browser window on a separate line. */  7.95
+
+        const roundDown = Math.floor(7.95);
+        document.write("Rounded Down: " + roundDown + "<br>");
+
+        /* 5. Use a Math object to create a random number. Use the random number to change the source of the <img> tag (above) to
+        a random image found in the following array. The <img> tag has been given the id of 'randomImage' to help you. Each image
+        must have a chance to display without any blank images. When finished, write the random number itself to the
+        browser window on a separate line.
+            Hint: Use the .src property to change the source of the image */
+        const images = [
+            "images/batman.png",
+            "images/captain-america.png",
+            "images/firestar.png",
+            "images/flash.png",
+            "images/iron-man.png",
+            "images/panther.png",
+            "images/scarlet-witch.png",
+            "images/thor.png",
+            "images/vision.png"
+        ];
+        const randomImg = Math.floor(Math.random() * images.length);
+        document.getElementById('randomImage').src = images[randomImg];
+        document.write("Random Number: " + randomImg + "<br>");
+
+        /* 6. Create a new Date object that returns the current date and write it to the page on a separate line. Do not format the
+        date or return specific parts of the date. Simply return the entire current Date object. */
+
+        const currentDate = new Date();
+        document.write(currentDate + "<br>");
+
+    </script>
+</body>
+</html>
