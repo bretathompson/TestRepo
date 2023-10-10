@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <!-- Place your code between the <script> tags below.
+
+        1. Use a constructor function to create an object named 'Book'. Give the Book object the following attributes: title, author, pages.
+
+        2. Create an instance of the Book object named 'favoriteBook' and populate it with book information
+            NOTE: If you don't have a book in mind, you are welcome to use any of the books from the list at the bottom. Remember,
+            Internet use is prohibited, so guesstimate the information if needed.
+
+        3. Create another instance of the Book object named 'leastFavoriteBook' and populate it with book information
+
+        4. Write to the page information about your favorite book in this format, filling in the blanks using the Book object:
+            My favorite book is __________. It is written by __________ and contains __________ pages.
+
+        5. On a separate line, write the same information to the page about your least favorite book using the same Book object:
+            My least favorite book is __________. It is written by __________ and contains __________ pages.
+    -->
+
+
+    <script>
+
+        function Book( title, author, pages) {
+            this.title = title,
+            this.author = author,
+            this.pages = pages
+            };
+
+
+        let favoriteBook = new Book("The Adventures of Huckleberry Finn", "Mark Twain ", 362);
+        let leastFavoriteBook = new Book("Animal Farm", "George Orwell", 130);
+        
+
+        document.write("My favorite book is " + favoriteBook.title + ". It is written by " + 
+        favoriteBook.author + " and contains " + favoriteBook.pages + " pages. <br><br>");
+
+        document.write("My least favorite book is " + leastFavoriteBook.title + ". It is written by " + 
+        leastFavoriteBook.author + " and contains " + leastFavoriteBook.pages + " pages.");
+        
+
+    </script>
+
+
+    <!-- BOOK LIST:
+        +---------------------------------------+---------------------+-------+
+        | NAME                                  | AUTHOR              | PAGES |
+        +---------------------------------------+---------------------+-------+
+        | The Adventures of Huckleberry Finn    | Mark Twain          | 362   |
+        | Alice's Adventures in Wonderland      | Lewis Carroll       | 70    |
+        | Animal Farm                           | George Orwell       | 130   |
+        | Charlotte's Web                       | E.B. White          | 192   |
+        | Don Quixote                           | Miguel de Cervantes | 1077  |
+        | Dune                                  | Frank Herbert       | 896   |
+        | The Essential Calvin and Hobbes       | Bill Watterson      | 256   |
+        | The Fellowship of the Ring            | J.R.R. Tolkien      | 479   |
+        | Forrest Gump                          | Winston Groom       | 228   |
+        | The Great Gatsby                      | F. Scott Fitzgerald | 208   |
+        | Harry Potter and the Sorcerer's Stone | J.K. Rowling        | 223   |
+        | How to Train Your Dragon              | Cressida Cowell     | 256   |
+        | Jurassic Park                         | Michael Crichton    | 448   |
+        | Les Miserables                        | Victor Hugo         | 1500  |
+        | Little Women                          | Louisa May Alcott   | 528   |
+        | Lord of the Flies                     | William Golding     | 224   |
+        | Mein Kampf                            | Adolf Hitler        | 720   |
+        | My Hero Academia Vol. a               | Kohei Horikoshi     | 192   |
+        | The Shining                           | Stephen King        | 447   |
+        | Twilight                              | Stephenie Meyer     | 544   |
+        +---------------------------------------+---------------------+-------+
+    -->
+
+</body>
+</html>

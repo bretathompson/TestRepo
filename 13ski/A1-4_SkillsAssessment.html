@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: #fff383;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        #fair {
+            width: 640px;
+            margin: auto;
+        }
+        #fairInfo {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Place your code between the <script> tags below. Create all changes using JavaScript. Do not change the HTML or CSS.
+        
+        1. Use JavaScript to create a <p> tag and append it inside the 'fairInfo' div
+
+        2. Use the innerHTML property to add the following text inside the newly created <p> tag:
+            Come see the life-sized 600 pound butter cow!
+        
+        3. Use the JavaScript style property to change the background color of the 'fairInfo' div to FF4D48
+
+        4. Use the style property to change the text color of the everything inside the 'fairInfo' div to FFF383
+    -->
+    <div id="fair">
+        <img src="images/fair.png" alt="fair">
+    </div>
+    <div id="fairInfo">
+        <h1>County Fair</h1>
+    </div>
+    
+    <script>
+
+        let paragraph = document.createElement("p");
+
+        let fairInfo = document.getElementById("fairInfo");
+            fairInfo.appendChild(paragraph);
+
+
+        paragraph.innerHTML = "Come see the life-sized 600 pound butter cow!";
+
+        fairInfo.style.backgroundColor = "#FF4D48";
+        fairInfo.style.color = "#FFF383";
+
+    </script>
+</body>
+</html>
+
+
+
+
+

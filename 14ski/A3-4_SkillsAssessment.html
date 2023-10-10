@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        #fire {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Add your code between the <script> tags below. Do not add any JavaScript code inside the HTML code. Remember
+        to use JavaScript to accomplish everything.
+        
+        1. Add an event method so when 'button1' is clicked the background of the entire webpage turns to
+        the color 0160b9. 
+            Hint: You can select the entire page using: document.body
+
+        2. Add event methods so when the car.png image is hovered over, the fire.png image becomes visible. When the car.png image
+        is no longer hovered over, the fire.png image should disappear. 
+            Hint: Both of these images can be found in the HTML. The fire.png image is hidden by using 'display: none' in the
+            CSS. To make it appear, use JS to change the display to 'inline'
+
+        3. Add an event method so when any key is pressed on the keyboard the <h1> tag with an id of 'run' is populated with
+        the text: Run for it Marty!
+            Hint: If you attach the event to 'document', it will fire whenever any key is pressed without using an input box, etc.
+    -->
+    <button id="button1">Button 1</button>
+    <div>
+        <img src="images/car.png" alt="Back to the Future car" id="car">
+        <img src="images/fire.png" alt="Fire" id="fire">
+    </div>
+    <h1 id="run"></h1>
+
+
+    <script>
+      
+        let button1 = document.getElementById('button1');
+
+        button1.addEventListener('click', function () {
+            document.body.style.backgroundColor = "#0160b9";
+    });
+
+
+        let car = document.getElementById('car');
+        let fire = document.getElementById('fire');
+        
+        car.addEventListener('mouseover', function() {
+            fire.style.display = "inline";
+    });
+        car.addEventListener('mouseout', function() {
+            fire.style.display = "none";
+    });
+
+
+        let pressedKey = "Run for it Marty!";
+    
+        let runText = document.getElementById('run');
+        document.addEventListener('keypress', function() {
+            runText.textContent = pressedKey;
+    });
+
+
+    </script>
+
+</body>
+</html>
+
+

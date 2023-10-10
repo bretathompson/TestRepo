@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+            color: #fff;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        header {
+            background-image: url("images/WednesdayTitle_Banner.jpg");
+            height: 170px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #room img {
+            width: 500px;
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+
+    <div id="room">
+            <img src="images/Wednesday_Room.jpg" alt="Wednesday and Enid fighting over their room">
+    </div>
+    
+    <script>
+        const wednesday = "<br>- Wednesday Addams";
+
+        function rainbowAlert() {
+            alert("Dividing our room equally.");
+        }
+    
+        function quote(firstLine, secondLine) {
+            document.write(firstLine + " " + secondLine);
+            
+            rainbowAlert();
+        }
+        
+        quote("It looks like a rainbow", "vomited on your side.");
+    
+        document.write(wednesday);
+
+    </script>
+</body>
+</html>
+
+
+
+    <!-- Add your code between the <script> tags below -->
+        <!--
+            1. Create a global constant named 'wednesday' with the value of:
+
+                <br>- Wednesday Addams
+
+            2. Create a function declaration (not an expression, constructor, or arrow function) named 'rainbowAlert'. It will not
+                have parameters. Add code inside the function that creates a popup with the following text:
+
+                Dividing our room equally.
+
+            3. Create another function declaration named 'quote' with two parameters: 'firstLine', 'secondLine'. Inside the function, use
+                code that concatenates the two parameters and writes the result to the browser window (not a popup)
+            
+            4. Call the 'rainbowAlert' function inside the 'quote' function
+
+            5. Below both functions, call the 'quote' function and pass the following two strings as arguments:
+
+                It looks like a rainbow 
+
+                vomited on your side.
+
+            6. After the function call, write the global variable 'wednesday' to the browser window
+        -->
+
