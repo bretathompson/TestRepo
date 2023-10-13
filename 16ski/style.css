@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    color: #eee;
+    font-size: 20px;
+}
+form {
+    background-color: #a10f0f;
+    padding-bottom: 25px;
+}
+form span {
+    padding-left: 40px;
+}
+#submitButton {
+    background-color: #f13533;
+    border: none;
+    padding: 3px 10px;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+}

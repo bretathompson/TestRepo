@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!--
+        Add your code between the <script> tags below
+
+        1. Create a regular expression that checks if the user enters a barcode number in the correct format when they submit
+        the form. The user will enter the barcode into the input box with an id of 'barcode' and press the 'Submit' button. The
+        form has been created for you.
+            A. Use an event method that listens for a submit event on the form
+            B. The format should be as follows: 123AB-4567CDE
+                - The format is any three numbers, followed by the specific letters 'AB', followed by a hyphen, followed by any four 
+                numbers, followed by the specific letters 'CDE'
+            C. Ensure that the user cannot enter too many characters
+            D. Include a conditional that returns one of the following popups determined by whether the barcode is the correct
+            format or not:
+                - If correct: 'Correct barcode!'
+                - If incorrect: 'Incorrect barcode! Please use this format: 123AB-4567CDE'
+    -->
+    <form action="" id="barcodeForm">
+        <img src="images/BarcodeOfLove.jpg" alt="Barcode of Love"><br>
+
+        <span>Barcode for secret love message: <input type="text" id="barcode">
+        <input type="submit" value="Submit" id="submitButton"></span>
+    </form>
+    <script>
+   document.addEventListener("DOMContentLoaded", function() {
+        const barcodeForm = document.getElementById("barcodeForm");
+        const barCode = document.getElementById("barcode");
+
+        barcodeForm.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            const enterText = /^\d{3}AB-\d{4}CDE$/;
+
+            if (enterText.test(barCode.value)) {
+                alert("Correct barcode!");
+            } else {
+                alert("Incorrect barcode! Please use this format: 123AB-4567CDE");
+            }
+        });
+    });
+
+        
+    </script>
+</body>
+</html>
+
