@@ -1,0 +1,18 @@
+body {
+    background-color: #cc6300;
+    background-image: url("images/Clock.png");
+}
+#timerBox {
+    background-color: orange;
+    color: #663201;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    font-size: 80px;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#timer {
+    margin: 0;
+}

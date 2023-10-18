@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!--
+        Add all code between the <script> tags below
+
+        1. A timer has been created for you, but it does not function yet. Your goal is to make the timer do the following:
+            A. The Start button will start the timer. The current value of the timer is zero. When a user presses the
+            start button, the number will begin to increase by one and continue to increase once a second
+            B. The Stop button will stop the timer. The timer will remain on the current number
+            C. The Reset button will set the timer back to zero
+        2. Use a JavaScript method to increase the timer number. Do not use a loop
+		3. Use a JavaScript method to stop the timer
+    -->
+
+    <div id="timerBox">
+        <p id="timer">0</p>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <script>
+
+        let timeValue = 0;
+        let timeInterval;
+
+        function newTime() {
+           document.getElementById("timer").textContent = timeValue;
+        }
+
+        document.getElementById("start").addEventListener("click", function () {
+            if (!timeInterval) {
+                timeInterval = setInterval(function () {
+                    timeValue++;
+                    newTime();
+                }, 1000);
+            }
+        });
+
+        document.getElementById("stop").addEventListener("click", function () {
+            clearInterval(timeInterval);
+            timeInterval = null;
+        });
+
+        document.getElementById("reset").addEventListener("click", function () {
+            clearInterval(timeInterval);
+            timeValue = 0;
+            newTime();
+            timeInterval = null;
+        });
+                
+    </script>
+</body>
+</html>
+
+
+
