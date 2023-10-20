@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <form id="specialForm" action="ThankYou/A8-3_Thanks.html">
+        I JUST WANTED TO SAY<br>
+        <label for="hi">Hi</label>
+            <input type="radio" id="hi" name="say" value="hi">
+        <label for="thanks">Thank You</label>
+            <input type="radio" id="thanks" name="say" value="sorry">
+        <label for="sorry">Sorry</label>
+            <input type="radio" id="sorry" name="say" value="sorry">
+        <p id="sayError"></p>
+        <hr>
+        
+        BECAUSE<br>
+        <label for="cool">You're Cool</label>
+            <input type="radio" id="cool" name="because" value="youCool">
+        <label for="friend">You're my Friend</label>
+            <input type="radio" id="friend" name="because" value="youFriend">
+        <label for="missYou">I miss you</label>
+            <input type="radio" id="missYou" name="because" value="missYou">
+        <label for="loveYou">I love you</label>
+            <input type="radio" id="loveYou" name="because" value="loveYou">
+        <hr>
+        
+        MY SPECIAL MESSAGE<br>
+        <textarea></textarea>
+        <hr>
+        
+        PLEASE<br>
+        <label for="writeback">Write Back</label>
+            <input type="checkbox" id="writeback">
+        <label for="funnyface">Make a Funny Face</label>
+            <input type="checkbox" id="funnyface">
+        <label for="comeover">Come over</label>
+            <input type="checkbox" id="comeover">
+        <hr>
+        
+        OUR CURRENT RELATIONSHIP<br>
+        <!-- 1. Create a meter directly below this step that has a low value of 0 and a high value of 100. Set the current value to 83. -->
+            <meter min="0" max="100" value="83"></meter>
+        <hr>
+        
+        MEET UPS (OUT OF 10)<br>
+        <!-- 2. Create a progress bar directly below this step that has a value of 3 and a high value of 10. -->
+            <progress min="0" max="10" value="3"></progress>
+        
+        <br><br>
+        <input type="button" value="Submit" id="submitButton">
+    </form>
+        <!-- 3. Add the code for this step between the following <script> tags. Create a click event for the submit button of
+            the form (not a 'submit' event). Inside the click event, use a JavaScript method to make the form submit when the
+            click event fires. -->
+
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function(event) {
+            event.preventDefault();
+            
+            document.getElementById("specialForm").submit();
+        });        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+body {
+    background-color: #fde47f;
+}
+form, #thankYou {
+    background-color: white;
+    width: 480px;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 25px;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 15px;
+    margin-left: 0;
+}
+textarea {
+    width: 470px;
+    height: 100px;
+}
+meter, progress {
+    width: 100%;
+    height: 30px;
+}
+progress {
+    accent-color: #bbb;
+}
+
+meter::-webkit-meter-optimum-value {
+    background: #bbb;
+}
+
+#thankYou {
+    text-align: center;
+}
+
